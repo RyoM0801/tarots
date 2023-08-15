@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tarot Reading App</title>
+</head>
+<body>
+    <h1>Tarot Reading</h1>
+    <form method="POST">
+        <h2>Card Positions</h2>
+        {% for i in range(1, 11) %}
+        <div>
+            <h3>Card Position {{ i }}</h3>
+            <label for="card_type_{{ i }}">Card Type:</label>
+            <input type="radio" name="card_type_{{ i }}" value="major" id="major_{{ i }}" onchange="handleCardTypeChange({{ i }})" checked> Major Arcana
+            <input type="radio" name="card_type_{{ i }}" value="minor" id="minor_{{ i }}" onchange="handleCardTypeChange({{ i }})"> Minor Arcana
+
+            <div id="arcana_card_{{ i }}">
+                <label for="arcana_card_{{ i }}">Major Arcana Rank:</label>
+                <select name="arcana_card_{{ i }}" id="arcana_card_{{ i }}">
+                    {% for j in range(22) %}
+                        <option value="{{ j }}">{{ j }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+
+            <div id="minor_rank_{{ i }}" style="display:none;">
+                <label for="minor_suit_{{ i }}">Minor Arcana Suit:</label>
+                <select name="minor_suit_{{ i }}">
+                    <option value="wand">Wands</option>
+                    <option value="sword">Swords</option>
+                    <option value="cup">Cups</option>
+                    <option value="pentacle">Pentacles</option>
+                </select>
+                
+                <label for="minor_rank_{{ i }}">Minor Arcana Rank:</label>
+                <select name="minor_rank_{{ i }}">
+                    {% for rank in ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "king", "queen", "knight", "page"] %}
+                        <option value="{{ rank }}">{{ rank }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            
+            <label for="reversed_{{ i }}">Reversed:</label>
+            <input type="radio" name="reversed_{{ i }}" value="yes">Yes
+            <input type="radio" name="reversed_{{ i }}" value="no" checked>No
+        </div>
+        {% endfor %}
+        <!-- 8. 3つのサマリ -->
+        <h2>Summary</h2>
+        <div>
+            <h3>Summary 1: Major and Minor Arcana Count</h3>
+            <p>Number of Major Arcana Cards: <span id="major_count"></span></p>
+            <p>Number of Minor Arcana Cards: <span id="minor_count"></span></p>
+        </div>
+        <div>
+            <h3>Summary 2: Minor Arcana Card Types Count</h3>
+            <p>Number of Wands: <span id="wands_count"></span></p>
+            <p>Number of Swords: <span id="swords_count"></span></p>
+            <p>Number of Cups: <span id="cups_count"></span></p>
+            <p>Number of Pentacles: <span id="pentacles_count"></span></p>
+        </div>
+        <div>
+            <h3>Summary 3: Upright and Reversed Cards Count</h3>
+            <p>Number of Upright Cards: <span id="upright_count"></span></p>
+            <p>Number of Reversed Cards: <span id="reversed_count"></span></p>
+        </div>
+    </form>
+</body>
+<!-- スクリプト部分 -->
+<script>
+    function handleCardTypeChange(position) {
+        var majorRadio = document.getElementById("major_" + position);
+        var minorRankDiv = document.getElementById("minor_rank_" + position);
+        var arcanaCardDiv = document.getElementById("arcana_card_" + position);
+
+        if (majorRadio.checked) {
+            minorRankDiv.style.display = "none";
+            arcanaCardDiv.style.display = "block";
+        } else {
+            minorRankDiv.style.display = "block";
+            arcanaCardDiv.style.display = "none";
+        }
+        // サマリ情報の更新と赤色の適用を呼び出す
+        updateSummary();
+    }
+
+    // 9. 赤色の適用
+    function applyRedColorIfMoreThanFive(countElement) {
+        var count = parseInt(countElement.innerText);
+        if (count >= 5) {
+            countElement.style.color = "red";
+        }
+    }
+
+    // 10. サマリ情報の更新と赤色の適用
+    function updateSummary() {
+        // 仮想的なデータを使用してサマリ情報を計算
+        var majorCount = 0;
+        var minorCount = 0;
+        var wandsCount = 0;
+        var swordsCount = 0;
+        var cupsCount = 0;
+        var pentaclesCount = 0;
+        var uprightCount = 0;
+        var reversedCount = 0;
+
+        // 各要素の値を取得して計算
+        for (var i = 1; i <= 10; i++) {
+            var cardTypeRadio = document.querySelector("input[name='card_type_" + i + "']:checked");
+            var reversedRadio = document.querySelector("input[name='reversed_" + i + "']:checked");
+            
+            if (cardTypeRadio.value === "major") {
+                majorCount++;
+                if (reversedRadio.value === "yes") {
+                    reversedCount++;
+                } else {
+                    uprightCount++;
+                }
+            } else {
+                minorCount++;
+                if (reversedRadio.value === "yes") {
+                    reversedCount++;
+                } else {
+                    uprightCount++;
+                }
+
+                var minorSuitSelect = document.getElementById("minor_suit_" + i);
+                var minorRankSelect = document.getElementById("minor_rank_" + i);
+
+                if (minorSuitSelect.value === "wand") {
+                    wandsCount++;
+                } else if (minorSuitSelect.value === "sword") {
+                    swordsCount++;
+                } else if (minorSuitSelect.value === "cup") {
+                    cupsCount++;
+                } else if (minorSuitSelect.value === "pentacle") {
+                    pentaclesCount++;
+                }
+            }
+        }
+
+        document.getElementById("major_count").innerText = majorCount;
+        document.getElementById("minor_count").innerText = minorCount;
+        document.getElementById("wands_count").innerText = wandsCount;
+        document.getElementById("swords_count").innerText = swordsCount;
+        document.getElementById("cups_count").innerText = cupsCount;
+        document.getElementById("pentacles_count").innerText = pentaclesCount;
+        document.getElementById("upright_count").innerText = uprightCount;
+        document.getElementById("reversed_count").innerText = reversedCount;
+
+        applyRedColorIfMoreThanFive(document.getElementById("major_count"));
+        applyRedColorIfMoreThanFive(document.getElementById("minor_count"));
+        applyRedColorIfMoreThanFive(document.getElementById("wands_count"));
+        applyRedColorIfMoreThanFive(document.getElementById("swords_count"));
+        applyRedColorIfMoreThanFive(document.getElementById("cups_count"));
+        applyRedColorIfMoreThanFive(document.getElementById("pentacles_count"));
+        applyRedColorIfMoreThanFive(document.getElementById("upright_count"));
+        applyRedColorIfMoreThanFive(document.getElementById("reversed_count"));
+    }
+
+    // ページ読み込み時にサマリ情報を更新
+    window.onload = updateSummary;
+</script>
+</html>
