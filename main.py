@@ -2,7 +2,7 @@ from flask import Flask, render_template, request, jsonify
 import os
 import json
 
-app = Flask(__name__, static_folder='./img')
+app = Flask(__name__)
 
 # サンプルのカードデータ
 with open('card.json',encoding="utf-8_sig") as f:
@@ -20,7 +20,7 @@ transe_dict = {
     "king": "キング"
 }
 
-dir_path = os.path.join("img")
+dir_path = os.path.join("static", "img")
 files_file = [
     f for f in os.listdir(dir_path) if os.path.isfile(os.path.join(dir_path, f))
 ]
