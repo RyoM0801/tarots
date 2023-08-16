@@ -9,40 +9,94 @@
         <h2>Card Positions</h2>
         {% for i in range(1, 11) %}
         <div>
-            <h3>Card Position {{ i }}</h3>
-            <label for="card_type_{{ i }}">Card Type:</label>
-            <input type="radio" name="card_type_{{ i }}" value="major" id="major_{{ i }}" onchange="handleCardTypeChange({{ i }})" checked> Major Arcana
-            <input type="radio" name="card_type_{{ i }}" value="minor" id="minor_{{ i }}" onchange="handleCardTypeChange({{ i }})"> Minor Arcana
-
-            <div id="arcana_card_{{ i }}">
-                <label for="arcana_card_{{ i }}">Major Arcana Rank:</label>
-                <select name="arcana_card_{{ i }}" id="arcana_card_{{ i }}">
-                    {% for j in range(22) %}
-                        <option value="{{ j }}">{{ j }}</option>
-                    {% endfor %}
-                </select>
-            </div>
-
-            <div id="minor_rank_{{ i }}" style="display:none;">
-                <label for="minor_suit_{{ i }}">Minor Arcana Suit:</label>
-                <select name="minor_suit_{{ i }}">
-                    <option value="wand">Wands</option>
-                    <option value="sword">Swords</option>
-                    <option value="cup">Cups</option>
-                    <option value="pentacle">Pentacles</option>
-                </select>
-                
-                <label for="minor_rank_{{ i }}">Minor Arcana Rank:</label>
-                <select name="minor_rank_{{ i }}">
-                    {% for rank in ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "king", "queen", "knight", "page"] %}
-                        <option value="{{ rank }}">{{ rank }}</option>
-                    {% endfor %}
-                </select>
-            </div>
-            
-            <label for="reversed_{{ i }}">Reversed:</label>
-            <input type="radio" name="reversed_{{ i }}" value="yes">Yes
-            <input type="radio" name="reversed_{{ i }}" value="no" checked>No
+            <table>
+                <thead>
+                    <tr>
+                    {% if i == 1 %}
+                        <th colspan="2">Card Position {{ i }} :現在の状況</th>
+                    {% elif i == 2 %}
+                        <th colspan="2">Card Position {{ i }} :問題の原因</th>
+                    {% elif i == 3 %}
+                        <th colspan="2">Card Position {{ i }} :願望・目標</th>
+                    {% elif i == 4 %}
+                        <th colspan="2">Card Position {{ i }} :無意識化</th>
+                    {% elif i == 5 %}
+                        <th colspan="2">Card Position {{ i }} :直近過去</th>
+                    {% elif i == 6 %}
+                        <th colspan="2">Card Position {{ i }} :直近将来</th>
+                    {% elif i == 7 %}
+                        <th colspan="2">Card Position {{ i }} :自分自身</th>
+                    {% elif i == 8 %}
+                        <th colspan="2">Card Position {{ i }} :自身周辺</th>
+                    {% elif i == 9 %}
+                        <th colspan="2">Card Position {{ i }} :希望、悩み事</th>
+                    {% elif i == 10 %}
+                        <th colspan="2">Card Position {{ i }} :結論</th>
+                    {% endif %}
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <div id="card_type_{{ i }}">
+                                <label for="card_type_radio_{{ i }}">Card Type:</label>
+                                <input type="radio" name="card_type_radio_{{ i }}" value="major" id="major_radio_{{ i }}" onchange="handleCardTypeChange({{ i }})" checked> 大アルカナ
+                                <input type="radio" name="card_type_radio_{{ i }}" value="minor" id="minor_radio_{{ i }}" onchange="handleCardTypeChange({{ i }})"> 小アルカナ
+                            </div>
+                            <div id="major_rank_{{ i }}">
+                                <label for="major_rank_select_{{ i }}">Major Arcana Rank:</label>
+                                <select name="major_rank_select_{{ i }}" id="major_rank_select_{{ i }}" onchange="handleCardTypeChange({{ i }})">
+                                    {% for j in range(22) %}
+                                        <option value="{{ j }}">{{ j }}</option>
+                                    {% endfor %}
+                                </select>
+                            </div>
+                            <div id="minor_rank_{{ i }}" style="display:none;">
+                                <div>
+                                    <label for="minor_suit_select_{{ i }}">Minor Arcana Suit:</label>
+                                    <select name="minor_suit_select_{{ i }}" id="minor_suit_select_{{ i }}" onchange="handleCardTypeChange({{ i }})">
+                                        <option value="wand">Wands</option>
+                                        <option value="sword">Swords</option>
+                                        <option value="cup">Cups</option>
+                                        <option value="pentacle">Pentacles</option>
+                                    </select>    
+                                </div>
+                                <div>
+                                    <label for="minor_rank_select_{{ i }}">Minor Arcana Rank:</label>
+                                    <select name="minor_rank_{{ i }}" id="minor_rank_select_{{ i }}" onchange="handleCardTypeChange({{ i }})">
+                                        {% for rank in ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "king", "queen", "knight", "page"] %}
+                                            <option value="{{ rank }}">{{ rank }}</option>
+                                        {% endfor %}
+                                    </select>
+                                    </div>
+                            </div>
+                            <div id="card_direction_{{ i }}">
+                                <label for="reversed_radio_{{ i }}">向き:</label>
+                                <input type="radio" name="reversed_radio_{{ i }}" value="no" onchange="handleCardTypeChange({{ i }})" checked>正位置
+                                <input type="radio" name="reversed_radio_{{ i }}" value="yes" onchange="handleCardTypeChange({{ i }})">逆位置
+                            </div>
+                        </td>
+                        <td>
+                            <!-- カードの説明と画像表示部分 -->
+                            <div id="card_details">
+                                <div id="card_description">
+                                    <h5>Card Description:</h5>
+                                    <p id="card_description_text_{{ i }}"></p>
+                                </div>
+                                <div id="card_words">
+                                    <h5>Card Words:</h5>
+                                    <p id="card_words_text_{{ i }}"></p>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div id="card_image">
+                                <img id="card_image_src_{{ i }}" src="" alt="Card Image" height="150px">
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
         {% endfor %}
         <!-- 8. 3つのサマリ -->
@@ -54,10 +108,10 @@
         </div>
         <div>
             <h3>Summary 2: Minor Arcana Card Types Count</h3>
-            <p>Number of Wands: <span id="wands_count"></span></p>
-            <p>Number of Swords: <span id="swords_count"></span></p>
-            <p>Number of Cups: <span id="cups_count"></span></p>
-            <p>Number of Pentacles: <span id="pentacles_count"></span></p>
+            <p>Number of Wands(情熱): <span id="wands_count"></span></p>
+            <p>Number of Swords(知恵): <span id="swords_count"></span></p>
+            <p>Number of Cups(感情): <span id="cups_count"></span></p>
+            <p>Number of Pentacles(安定): <span id="pentacles_count"></span></p>
         </div>
         <div>
             <h3>Summary 3: Upright and Reversed Cards Count</h3>
@@ -69,9 +123,9 @@
 <!-- スクリプト部分 -->
 <script>
     function handleCardTypeChange(position) {
-        var majorRadio = document.getElementById("major_" + position);
+        var majorRadio = document.getElementById("major_radio_" + position);
         var minorRankDiv = document.getElementById("minor_rank_" + position);
-        var arcanaCardDiv = document.getElementById("arcana_card_" + position);
+        var arcanaCardDiv = document.getElementById("major_rank_" + position);
 
         if (majorRadio.checked) {
             minorRankDiv.style.display = "none";
@@ -83,6 +137,28 @@
         // サマリ情報の更新と赤色の適用を呼び出す
         updateSummary();
     }
+
+    function getSampleCardData(i, cardType, major_rank, minor_suit, minor_rank, reversed) {
+        fetch("/get_card_data", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/x-www-form-urlencoded",
+            },
+            body: `card_type=${cardType}&major_rank=${major_rank}&minor_suit=${minor_suit}&minor_rank=${minor_rank}&reversed=${reversed}`,
+        })
+        .then(response => response.json())
+        .then(data => {
+            // カードデータを表示
+            console.log(data)
+            document.getElementById("card_image_src_"+i).src = data.src;
+            document.getElementById("card_description_text_"+i).innerText = data.description;
+            document.getElementById("card_words_text_"+i).innerText = data.words;
+        })
+        .catch(error => {
+            console.error("Error fetching card data:", error);
+        });
+    }
+
 
     // 9. 赤色の適用
     function applyRedColorIfMoreThanFive(countElement) {
@@ -106,9 +182,12 @@
 
         // 各要素の値を取得して計算
         for (var i = 1; i <= 10; i++) {
-            var cardTypeRadio = document.querySelector("input[name='card_type_" + i + "']:checked");
-            var reversedRadio = document.querySelector("input[name='reversed_" + i + "']:checked");
-            
+            var cardTypeRadio = document.querySelector("input[name='card_type_radio_" + i + "']:checked");
+            var reversedRadio = document.querySelector("input[name='reversed_radio_" + i + "']:checked");
+            var majaorRankSelect = document.getElementById("major_rank_select_" + i);
+            var minorSuitSelect = document.getElementById("minor_suit_select_" + i);
+            var minorRankSelect = document.getElementById("minor_rank_select_" + i);
+
             if (cardTypeRadio.value === "major") {
                 majorCount++;
                 if (reversedRadio.value === "yes") {
@@ -124,9 +203,6 @@
                     uprightCount++;
                 }
 
-                var minorSuitSelect = document.getElementById("minor_suit_" + i);
-                var minorRankSelect = document.getElementById("minor_rank_" + i);
-
                 if (minorSuitSelect.value === "wand") {
                     wandsCount++;
                 } else if (minorSuitSelect.value === "sword") {
@@ -137,6 +213,7 @@
                     pentaclesCount++;
                 }
             }
+            var sampleCardData = getSampleCardData(i, cardTypeRadio.value, majaorRankSelect.value, minorSuitSelect.value, minorRankSelect.value, reversedRadio.value);
         }
 
         document.getElementById("major_count").innerText = majorCount;

@@ -1,33 +1,64 @@
-from flask import Flask, render_template, request
-import random
+from flask import Flask, render_template, request, jsonify
+import os
+import json
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder='./img')
 
-# タロットカードのデータ (例)
-tarot_cards = {
-    # カードデータの定義
+# サンプルのカードデータ
+with open('card.json',encoding="utf-8_sig") as f:
+    di = json.load(f)
+card_data = di
+
+transe_dict = {
+    "wand": "ワンド",
+    "cup": "カップ",
+    "sword": "ソード",
+    "pentacle": "ペンタクル",
+    "page": "ページ",
+    "knight": "ナイト",
+    "queen": "クイーン",
+    "king": "キング"
 }
 
-@app.route("/", methods=["GET", "POST"])
+dir_path = os.path.join("img")
+files_file = [
+    f for f in os.listdir(dir_path) if os.path.isfile(os.path.join(dir_path, f))
+]
+
+@app.route("/")
 def index():
-    if request.method == "POST":
-        # カードの選択と位置の取得
-        selected_cards = []
-        for i in range(1, 11):
-            card_type = request.form.get(f"card_type_{i}")
-            card_id = request.form.get(f"card_id_{i}")
-            is_reversed = request.form.get(f"reversed_{i}")
-            selected_cards.append({"type": card_type, "id": card_id, "reversed": is_reversed})
+    return render_template("index.html")
 
-        # カードの説明と画像データを格納するリスト
-        card_details = [1,2,3,4,5,6,7,8,9,10,"キング"]
-
-        # 他の処理をここに追加してください
-
-        return render_template("result.html", card_details=card_details)
-
-    return render_template("index.html", tarot_cards=tarot_cards)
-
+@app.route("/get_card_data", methods=["POST"])
+def get_card_data():
+    card_type = request.form.get("card_type")
+    reversed = request.form.get("reversed")
+    if card_type == "major":
+        rank = request.form.get("major_rank")
+        ret_data = card_data[card_type][rank]
+        src = ""
+        for file in files_file:
+            if "大アルカナ_"+rank in file:
+                src = file
+                break
+        ret_data["src"] = os.path.join(dir_path, src).replace("\\", "/")
+        ret_data["words"] = ret_data["negative_words"] if reversed == "yes" else ret_data["positive_words"]
+        return jsonify(ret_data)
+    elif card_type == "minor":
+        suit = request.form.get("minor_suit")
+        rank = request.form.get("minor_rank")
+        ret_data = card_data[card_type][suit][rank]
+        for file in files_file:
+            suit = transe_dict[suit] if suit in transe_dict.keys() else suit
+            rank = transe_dict[rank] if rank in transe_dict.keys() else rank
+            src = ""
+            if "小アルカナ_"+suit+"_"+rank in file:
+                src = file
+                break
+        ret_data["src"] = os.path.join(dir_path, src).replace("\\", "/")
+        ret_data["words"] = ret_data["negative_words"] if reversed == "yes" else ret_data["positive_words"]
+        return jsonify(ret_data)
+    return jsonify({"error": "Card data not found"})
 
 if __name__ == "__main__":
     app.run(debug=True)

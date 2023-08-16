@@ -1,0 +1,482 @@
+{
+    "major": {
+        "0": {
+            "name": "The Fool",
+            "description": "周りを気にせず、自由に、これから新しいことが始まりそうな無限の可能性",
+            "positive_words": "冒険、新たなスタート、無邪気、消費",
+            "negative_words": "傲慢、不注意、熱狂、経験不足"
+        },
+        "1": {
+            "name": "The Magician",
+            "description": "意志の力と創造的な能力、賢明さ",
+            "positive_words": "創造力、実行力、集中力、意志の力",
+            "negative_words": "自己顕示欲、欺瞞、能力不足"
+        },
+        "2": {
+            "name": "The High Priestess",
+            "description": "直感と深い知識、秘密の解明",
+            "positive_words": "直感、深い知識、神秘的な力、潜在的な力",
+            "negative_words": "過度な慎重さ、秘密ごと、混乱"
+        },
+        "3": {
+            "name": "The Empress",
+            "description": "豊かさ、母性、創造力、愛",
+            "positive_words": "母性、豊かさ、愛、美、創造力",
+            "negative_words": "過保護、贅沢、怠惰"
+        },
+        "4": {
+            "name": "The Emperor",
+            "description": "権威、秩序、統治、安定",
+            "positive_words": "権威、統治、秩序、安定、実行力",
+            "negative_words": "専制、頑固さ、冷酷さ"
+        },
+        "5": {
+            "name": "The Hierophant",
+            "description": "伝統、宗教、道徳、知識の伝達",
+            "positive_words": "教え、伝統、宗教、知識の伝達、指導者",
+            "negative_words": "束縛、保守性、偏見"
+        },
+        "6": {
+            "name": "The Lovers",
+            "description": "愛、関係、選択、調和",
+            "positive_words": "愛、パートナーシップ、選択、調和",
+            "negative_words": "選択の難しさ、対立、過度の情熱"
+        },
+        "7": {
+            "name": "The Chariot",
+            "description": "勝利、自己信念、目標の達成",
+            "positive_words": "勝利、自己信念、意志の力、目標の達成",
+            "negative_words": "衝動的な行動、バランスの崩れ"
+        },
+        "8": {
+            "name": "Strength",
+            "description": "内的な力、勇気、自己制御",
+            "positive_words": "内的な力、勇気、自己制御、対処能力",
+            "negative_words": "我慢強さの不足、怒りの制御不足"
+        },
+        "9": {
+            "name": "The Hermit",
+            "description": "内省、孤独、知恵の探求",
+            "positive_words": "内省、孤独、深い知恵、精神的な指導",
+            "negative_words": "孤立、隔離、孤独感"
+        },
+        "10": {
+            "name": "Wheel of Fortune",
+            "description": "運命の変化、周期、運気の上昇",
+            "positive_words": "運命の変化、サイクル、運気の上昇",
+            "negative_words": "運命の逆転、変化の難しさ"
+        },
+        "11": {
+            "name": "Justice",
+            "description": "公正、平等、正義の行使",
+            "positive_words": "公正、平等、法の適用、バランス",
+            "negative_words": "偏見、過度な厳格さ、公平さの欠如"
+        },
+        "12": {
+            "name": "The Hanged Man",
+            "description": "見方を変える、献身、試練",
+            "positive_words": "視点の変化、献身、試練、停滞",
+            "negative_words": "無駄な犠牲、停滞、不安定さ"
+        },
+        "13": {
+            "name": "Death",
+            "description": "変革、終了、新たな始まり",
+            "positive_words": "変革、終了、新たな始まり、成長",
+            "negative_words": "抵抗、不必要な終了、停滞"
+        },
+        "14": {
+            "name": "Temperance",
+            "description": "調和、バランス、中道",
+            "positive_words": "調和、バランス、中庸、調整",
+            "negative_words": "極端、バランスの欠如、我慢強さの不足"
+        },
+        "15": {
+            "name": "The Devil",
+            "description": "束縛、欲望、誤解",
+            "positive_words": "束縛、欲望、誤解、誘惑",
+            "negative_words": "束縛からの脱却、誤解の解明"
+        },
+        "16": {
+            "name": "The Tower",
+            "description": "突然の変革、崩壊、自己啓示",
+            "positive_words": "突然の変化、崩壊、震撼、自己啓示",
+            "negative_words": "突然の破壊、混乱、困難"
+        },
+        "17": {
+            "name": "The Star",
+            "description": "希望、啓示、直感、平和",
+            "positive_words": "希望、啓示、直感、平和、願望成就",
+            "negative_words": "過度な理想主義、現実逃避"
+        },
+        "18": {
+            "name": "The Moon",
+            "description": "不確実性、幻想、無意識",
+            "positive_words": "不確実性、幻想、夢、無意識、直感",
+            "negative_words": "混乱、幻惑、恐怖"
+        },
+        "19": {
+            "name": "The Sun",
+            "description": "幸福、明るさ、成果、楽しさ",
+            "positive_words": "幸福、明るさ、成果、楽しさ、成功",
+            "negative_words": "過度な自信、独善、浮ついた考え"
+        },
+        "20": {
+            "name": "Judgment",
+            "description": "再評価、復活、自己評価",
+            "positive_words": "再評価、復活、自己評価、正当化",
+            "negative_words": "過去の判断への拘り、自己評価の過剰"
+        },
+        "21": {
+            "name": "The World",
+            "description": "完成、成就、新たな段階への移行",
+            "positive_words": "完成、成就、新たな段階、統合",
+            "negative_words": "未完成、停滞、孤立"
+        }
+    },
+    "minor": {
+        "wand": {
+            "1": {
+                "name": "Ace of Wands",
+                "description": "新たな始まりや成功の可能性",
+                "positive_words": "想像、事業、家族、情熱、新たな試み・発想",
+                "negative_words": "堕落、力不足、方向性の間違い"
+            },
+            "2": {
+                "name": "Two of Wands",
+                "description": "計画、将来の展望、意志の力",
+                "positive_words": "計画、選択、意志の力、将来の展望",
+                "negative_words": "不安定な計画、意志の欠如"
+            },
+            "3": {
+                "name": "Three of Wands",
+                "description": "展望、協力、成功への道",
+                "positive_words": "展望、協力、成功への道、計画の具体化",
+                "negative_words": "過度な自信、協力の不足"
+            },
+            "4": {
+                "name": "Four of Wands",
+                "description": "安定感、祝福、家庭、共有",
+                "positive_words": "安定感、祝福、家庭、共有、祝賀",
+                "negative_words": "環境の変化、祝福の見落とし"
+            },
+            "5": {
+                "name": "Five of Wands",
+                "description": "競争、対立、混乱",
+                "positive_words": "競争、対立、競争心、混乱",
+                "negative_words": "無駄な競争、協力不足、争いごと"
+            },
+            "6": {
+                "name": "Six of Wands",
+                "description": "勝利、認知、栄光",
+                "positive_words": "勝利、認知、栄光、成功への歩み",
+                "negative_words": "傲慢、虚栄、過度な認知"
+            },
+            "7": {
+                "name": "Seven of Wands",
+                "description": "防御、困難への立ち向かい",
+                "positive_words": "防御、困難への立ち向かい、競争",
+                "negative_words": "孤立、防御の過剰、弱気"
+            },
+            "8": {
+                "name": "Eight of Wands",
+                "description": "急速な展開、移動、変化",
+                "positive_words": "急速な展開、移動、変化、情報伝達",
+                "negative_words": "焦り、急ぎすぎ、情報の過負荷"
+            },
+            "9": {
+                "name": "Nine of Wands",
+                "description": "持続的な努力、忍耐、備え",
+                "positive_words": "持続的な努力、忍耐、備え、防御",
+                "negative_words": "過度な用心、疲労、壁の構築"
+            },
+            "10": {
+                "name": "Ten of Wands",
+                "description": "負担、過労、責任",
+                "positive_words": "負担、過労、責任、重荷",
+                "negative_words": "過度な負担、抵抗、助けの拒否"
+            },
+            "page": {
+                "name": "Page of Wands",
+                "description": "創造的な機会、情熱的な新たな始まり",
+                "positive_words": "創造的な機会、情熱的な新たな始まり、冒険心",
+                "negative_words": "不安定な興奮、計画の不足、無責任"
+            },
+            "knight": {
+                "name": "Knight of Wands",
+                "description": "行動力、情熱、勇敢さ",
+                "positive_words": "行動力、情熱、冒険心、勇敢さ",
+                "negative_words": "向こう見ず、焦り、無計画な行動"
+            },
+            "queen": {
+                "name": "Queen of Wands",
+                "description": "魅力、情熱、自信",
+                "positive_words": "魅力、情熱、自信、リーダーシップ",
+                "negative_words": "高慢、支配欲、感情のコントロール不足"
+            },
+            "king": {
+                "name": "King of Wands",
+                "description": "情熱的なリーダーシップ、創造力、決断力",
+                "positive_words": "情熱的なリーダーシップ、創造力、決断力",
+                "negative_words": "専制、傲慢、短気"
+            }
+        },
+        "cup": {
+            "1": {
+                "name": "Ace of Cups",
+                "description": "新たな感情や愛の始まり",
+                "positive_words": "感情、愛、創造、新たな始まり",
+                "negative_words": "感情の抑制、未熟な愛情"
+            },
+            "2": {
+                "name": "Two of Cups",
+                "description": "愛の結びつき、パートナーシップ、調和",
+                "positive_words": "愛の結びつき、パートナーシップ、調和、和解",
+                "negative_words": "愛の喪失、調和の崩れ"
+            },
+            "3": {
+                "name": "Three of Cups",
+                "description": "喜び、友情、共有",
+                "positive_words": "喜び、友情、共有、祝福",
+                "negative_words": "過度な浮かれ、調和の破綻"
+            },
+            "4": {
+                "name": "Four of Cups",
+                "description": "機会の見逃し、満足しない心",
+                "positive_words": "機会の見逃し、満足しない心、悩み",
+                "negative_words": "自己中心的な態度、無関心"
+            },
+            "5": {
+                "name": "Five of Cups",
+                "description": "失望、損失、後悔",
+                "positive_words": "失望、損失、後悔、感情の痛み",
+                "negative_words": "過去への固執、ネガティブな感情"
+            },
+            "6": {
+                "name": "Six of Cups",
+                "description": "過去への回帰、幸福な思い出、懐かしさ",
+                "positive_words": "過去への回帰、幸福な思い出、懐かしさ",
+                "negative_words": "過度な過去への執着、進歩の妨げ"
+            },
+            "7": {
+                "name": "Seven of Cups",
+                "description": "選択、幻想、選択肢の多さ",
+                "positive_words": "選択、幻想、選択肢の多さ、欲望",
+                "negative_words": "現実逃避、選択の困難さ"
+            },
+            "8": {
+                "name": "Eight of Cups",
+                "description": "離れる決断、内なる探求",
+                "positive_words": "離れる決断、内なる探求、成長",
+                "negative_words": "逃げ足の早さ、未練、不安定"
+            },
+            "9": {
+                "name": "Nine of Cups",
+                "description": "幸福、満足、願望の成就",
+                "positive_words": "幸福、満足、願望の成就、喜び",
+                "negative_words": "自己満足、虚栄心、過度の快楽"
+            },
+            "10": {
+                "name": "Ten of Cups",
+                "description": "家族、共感、幸福な絆",
+                "positive_words": "家族、共感、幸福な絆、喜び",
+                "negative_words": "理想化しすぎ、現実逃避"
+            },
+            "page": {
+                "name": "Page of Cups",
+                "description": "感受性、直感、創造的なアプローチ",
+                "positive_words": "感受性、直感、創造的なアプローチ、新たな感情",
+                "negative_words": "幼稚、現実逃避、感情の乱れ"
+            },
+            "knight": {
+                "name": "Knight of Cups",
+                "description": "ロマンチックなアプローチ、感受性、夢",
+                "positive_words": "ロマンチックなアプローチ、感受性、夢、情熱",
+                "negative_words": "幻想的な愛、現実逃避、感情の混乱"
+            },
+            "queen": {
+                "name": "Queen of Cups",
+                "description": "感受性、情熱、直感",
+                "positive_words": "感受性、情熱、直感、洞察力",
+                "negative_words": "過度な感傷、情熱の過剰、感情の混乱"
+            },
+            "king": {
+                "name": "King of Cups",
+                "description": "感受性豊かな指導者、情熱、調和",
+                "positive_words": "感受性豊かな指導者、情熱、調和、感情の制御",
+                "negative_words": "過度な感情の抑制、感情の混乱、優柔不断"
+            }
+        },
+        "sword": {
+            "1": {
+                "name": "Ace of Swords",
+                "description": "新たな考えや洞察力の始まり",
+                "positive_words": "洞察力、新たな考え、クリアな視点",
+                "negative_words": "過度な分析、冷酷な真実"
+            },
+            "2": {
+                "name": "Two of Swords",
+                "description": "決断の迫られる状況、バランス",
+                "positive_words": "決断の迫られる状況、バランス、葛藤",
+                "negative_words": "決断の遅延、情報の不足"
+            },
+            "3": {
+                "name": "Three of Swords",
+                "description": "悲嘆、失恋、心の傷",
+                "positive_words": "悲嘆、失恋、心の傷、別れ",
+                "negative_words": "感情的な傷、苦痛、心の闇"
+            },
+            "4": {
+                "name": "Four of Swords",
+                "description": "休息、回復、内面への深化",
+                "positive_words": "休息、回復、内面への深化、瞑想",
+                "negative_words": "過度な隔離、怠惰、回復の遅れ"
+            },
+            "5": {
+                "name": "Five of Swords",
+                "description": "勝利と敗北、競争心、対立",
+                "positive_words": "勝利と敗北、競争心、対立、過激",
+                "negative_words": "勝利への固執、仲間外れ、敗北感"
+            },
+            "6": {
+                "name": "Six of Swords",
+                "description": "移行、離れること、平和への道",
+                "positive_words": "移行、離れること、新たなスタート、平和",
+                "negative_words": "過去への固執、未練、困難な移行"
+            },
+            "7": {
+                "name": "Seven of Swords",
+                "description": "計略、策略、秘密の行動",
+                "positive_words": "計略、策略、秘密の行動、不正",
+                "negative_words": "欺瞞、裏切り、計画の失敗"
+            },
+            "8": {
+                "name": "Eight of Swords",
+                "description": "制約、閉じ込められた感、自己制限",
+                "positive_words": "制約、閉じ込められた感、自己制限、脱出",
+                "negative_words": "無力感、自己制約の強化、囚われの状態"
+            },
+            "9": {
+                "name": "Nine of Swords",
+                "description": "不安、心配、恐怖",
+                "positive_words": "不安、心配、恐怖、夜の苦悩",
+                "negative_words": "不安の増幅、過度な心配、恐怖の固執"
+            },
+            "10": {
+                "name": "Ten of Swords",
+                "description": "終末、困難、苦境",
+                "positive_words": "終末、困難、苦境、最低点",
+                "negative_words": "過去のエネルギー、深刻な打撃"
+            },
+            "page": {
+                "name": "Page of Swords",
+                "description": "知識の追求、冷静な洞察力",
+                "positive_words": "知識の追求、冷静な洞察力、新たな考え",
+                "negative_words": "軽率、分析の過剰、コミュニケーションの難しさ"
+            },
+            "knight": {
+                "name": "Knight of Swords",
+                "description": "行動、決断、自己主張",
+                "positive_words": "行動、決断、自己主張、闘志",
+                "negative_words": "衝動的な行動、無慈悲な意志"
+            },
+            "queen": {
+                "name": "Queen of Swords",
+                "description": "冷静な分析、知識、洞察力",
+                "positive_words": "冷静な分析、知識、洞察力、論理的な思考",
+                "negative_words": "過度な冷静さ、感情の欠如、厳格さ"
+            },
+            "king": {
+                "name": "King of Swords",
+                "description": "知識と正義、公正、洞察力",
+                "positive_words": "知識と正義、公正、洞察力、判断力",
+                "negative_words": "冷酷、無感情、過度な理性主義"
+            }
+        },
+        "pentacle": {
+            "1": {
+                "name": "Ace of Pentacles",
+                "description": "物質的な新たな始まりや成功の可能性",
+                "positive_words": "物質的な始まり、成功の可能性、新たなチャンス",
+                "negative_words": "欲望の過剰、執着心、金銭への執着"
+            },
+            "2": {
+                "name": "Two of Pentacles",
+                "description": "バランスの取れた選択、調和",
+                "positive_words": "バランスの取れた選択、調和、適応力",
+                "negative_words": "多忙、バランスの崩れ、選択の困難さ"
+            },
+            "3": {
+                "name": "Three of Pentacles",
+                "description": "協力、共同作業、専門知識",
+                "positive_words": "協力、共同作業、専門知識、成果",
+                "negative_words": "協力の不足、誤解、努力の不足"
+            },
+            "4": {
+                "name": "Four of Pentacles",
+                "description": "保守的な安定、財政の保護",
+                "positive_words": "保守的な安定、財政の保護、物質的な安心感",
+                "negative_words": "物質への執着、共有の拒絶"
+            },
+            "5": {
+                "name": "Five of Pentacles",
+                "description": "困難、貧困、孤立",
+                "positive_words": "困難、貧困、孤立、絶望",
+                "negative_words": "物質的な喪失、絶望の拡大、孤独感"
+            },
+            "6": {
+                "name": "Six of Pentacles",
+                "description": "寛大さ、与えること、共有",
+                "positive_words": "寛大さ、与えること、共有、恩恵",
+                "negative_words": "片寄った寛大さ、自己犠牲の過剰"
+            },
+            "7": {
+                "name": "Seven of Pentacles",
+                "description": "努力の評価、待機、報酬",
+                "positive_words": "努力の評価、待機、報酬、成果の確認",
+                "negative_words": "忍耐の不足、報酬の見落とし"
+            },
+            "8": {
+                "name": "Eight of Pentacles",
+                "description": "努力、専念、スキルの向上",
+                "positive_words": "努力、専念、スキルの向上、継続的な努力",
+                "negative_words": "単調、努力の見返りの欠如"
+            },
+            "9": {
+                "name": "Nine of Pentacles",
+                "description": "独立、豊かさ、快適さ",
+                "positive_words": "独立、豊かさ、快適さ、自己満足",
+                "negative_words": "孤立、過度な独立、浪費"
+            },
+            "10": {
+                "name": "Ten of Pentacles",
+                "description": "繁栄、家族、安定",
+                "positive_words": "繁栄、家族、安定、財政的な安心感",
+                "negative_words": "物質的な幸福の追求、価値の歪曲"
+            },
+            "page": {
+                "name": "Page of Pentacles",
+                "description": "現実的な新たな始まり、学び、成長",
+                "positive_words": "現実的な新たな始まり、学び、成長、地道な努力",
+                "negative_words": "現実逃避、慎重すぎるアプローチ"
+            },
+            "knight": {
+                "name": "Knight of Pentacles",
+                "description": "忍耐強さ、現実的なアプローチ、責任感",
+                "positive_words": "忍耐強さ、現実的なアプローチ、責任感、忠誠心",
+                "negative_words": "過度な忍耐、保守的すぎる行動"
+            },
+            "queen": {
+                "name": "Queen of Pentacles",
+                "description": "豊かさ、地に足のついた実践",
+                "positive_words": "豊かさ、地に足のついた実践、安定感",
+                "negative_words": "過度な物質主義、保守的すぎる態度"
+            },
+            "king": {
+                "name": "King of Pentacles",
+                "description": "安定と繁栄のリーダーシップ、成功",
+                "positive_words": "安定と繁栄のリーダーシップ、成功、実践力",
+                "negative_words": "過度な保守性、物質至上主義、極端な執着"
+            }
+        }
+    }
+}
