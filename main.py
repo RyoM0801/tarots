@@ -1,11 +1,14 @@
 from flask import Flask, render_template, request, jsonify
 import os
 import json
+from pathlib import Path
 
 app = Flask(__name__)
+THIS_FOLDER = Path(__file__).parent.resolve()
+print(THIS_FOLDER)
 
 # サンプルのカードデータ
-with open('card.json',encoding="utf-8_sig") as f:
+with open(os.path.join(THIS_FOLDER, 'card.json'),encoding="utf-8_sig") as f:
     di = json.load(f)
 card_data = di
 
@@ -20,7 +23,7 @@ transe_dict = {
     "king": "キング"
 }
 
-dir_path = os.path.join("static", "img")
+dir_path = os.path.join(THIS_FOLDER, "static", "img")
 files_file = [
     f for f in os.listdir(dir_path) if os.path.isfile(os.path.join(dir_path, f))
 ]
