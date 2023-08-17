@@ -138,86 +138,86 @@
             "1": {
                 "name": "Ace of Wands",
                 "description": "新たな始まりや成功の可能性",
-                "positive_words": "想像、事業、家族、情熱、新たな試み・発想",
+                "positive_words": "事業、家族、情熱、新たな試み・発想",
                 "negative_words": "堕落、力不足、方向性の間違い"
             },
             "2": {
                 "name": "Two of Wands",
-                "description": "計画、将来の展望、意志の力",
-                "positive_words": "計画、選択、意志の力、将来の展望",
-                "negative_words": "不安定な計画、意志の欠如"
+                "description": "一定の成功を収めたが更に高いステージへ",
+                "positive_words": "居心地の良いから離れる、富、計画性、将来の計画",
+                "negative_words": "困惑、準備不足、安定、束縛への苦悩、自己中"
             },
             "3": {
                 "name": "Three of Wands",
-                "description": "展望、協力、成功への道",
-                "positive_words": "展望、協力、成功への道、計画の具体化",
-                "negative_words": "過度な自信、協力の不足"
+                "description": "ビジネスの成果が続いていく",
+                "positive_words": "努力、未来志向、野心を抱く、リーダーシップ",
+                "negative_words": "悩みの終わり、遅れ、進展がない、自信過剰、気弱な態度"
             },
             "4": {
                 "name": "Four of Wands",
-                "description": "安定感、祝福、家庭、共有",
-                "positive_words": "安定感、祝福、家庭、共有、祝賀",
-                "negative_words": "環境の変化、祝福の見落とし"
+                "description": "取り組んでいたことが安定し、喜びを味わう",
+                "positive_words": "安息、高成果、門出、出会い、落ち着く",
+                "negative_words": "不安定な基盤、成果の軽視、油断"
             },
             "5": {
                 "name": "Five of Wands",
-                "description": "競争、対立、混乱",
-                "positive_words": "競争、対立、競争心、混乱",
-                "negative_words": "無駄な競争、協力不足、争いごと"
+                "description": "富を求めた見せかけの競争",
+                "positive_words": "野心、自己主張、向上心、内面の葛藤",
+                "negative_words": "騙し合い、制御不能、混乱、妥協案"
             },
             "6": {
                 "name": "Six of Wands",
-                "description": "勝利、認知、栄光",
-                "positive_words": "勝利、認知、栄光、成功への歩み",
-                "negative_words": "傲慢、虚栄、過度な認知"
+                "description": "正当な評価を受け目標を達成しリーダーとし前進",
+                "positive_words": "成功、前進、楽観的、自信",
+                "negative_words": "不安、不利、裏切り、油断"
             },
             "7": {
                 "name": "Seven of Wands",
-                "description": "防御、困難への立ち向かい",
-                "positive_words": "防御、困難への立ち向かい、競争",
-                "negative_words": "孤立、防御の過剰、弱気"
+                "description": "周りからの妨害から緊張感を持ち、困難に戦う",
+                "positive_words": "地位を守る、抵抗、成功、コントロールできる状態",
+                "negative_words": "困惑、不安、孤独、力不足、差別化"
             },
             "8": {
                 "name": "Eight of Wands",
-                "description": "急速な展開、移動、変化",
-                "positive_words": "急速な展開、移動、変化、情報伝達",
-                "negative_words": "焦り、急ぎすぎ、情報の過負荷"
+                "description": "終わりに向かう急な変化",
+                "positive_words": "迅速さ、急速な展開、チャンス到来、解決",
+                "negative_words": "もめごと、目標設定ミス、優柔不断、後悔"
             },
             "9": {
                 "name": "Nine of Wands",
-                "description": "持続的な努力、忍耐、備え",
-                "positive_words": "持続的な努力、忍耐、備え、防御",
-                "negative_words": "過度な用心、疲労、壁の構築"
+                "description": "用意周到に対抗することができ、諦めない不屈の精神",
+                "positive_words": "遅延、用意周到、不屈、ピンチ◯",
+                "negative_words": "逆境、準備不足、無自覚の心の弱さ"
             },
             "10": {
                 "name": "Ten of Wands",
-                "description": "負担、過労、責任",
-                "positive_words": "負担、過労、責任、重荷",
-                "negative_words": "過度な負担、抵抗、助けの拒否"
+                "description": "重圧があるが、意思を強く持てば目標達成",
+                "positive_words": "ストレス増加、あと少し、目的遂行、制御不能、工数が足りない",
+                "negative_words": "過度な負担、断念、疲労、重圧からの解放、矛盾"
             },
             "page": {
                 "name": "Page of Wands",
-                "description": "創造的な機会、情熱的な新たな始まり",
-                "positive_words": "創造的な機会、情熱的な新たな始まり、冒険心",
-                "negative_words": "不安定な興奮、計画の不足、無責任"
+                "description": "好奇心が刺激され冒険のチャンス◯、ただ信頼できる人のサポートが必要",
+                "positive_words": "誠実、計画を起動に乗せる、新しい方向、葛藤、良い知らせ",
+                "negative_words": "悪い知らせ、優柔不断、気の利かない人、意志が弱い"
             },
             "knight": {
                 "name": "Knight of Wands",
-                "description": "行動力、情熱、勇敢さ",
-                "positive_words": "行動力、情熱、冒険心、勇敢さ",
-                "negative_words": "向こう見ず、焦り、無計画な行動"
+                "description": "自身があり、有機と情熱を備え野心的に目標を持ち進む",
+                "positive_words": "飛躍、情熱、向上心、野心的、方向性を決める必要性",
+                "negative_words": "中断、予測不可、自信過剰、医師が弱い"
             },
             "queen": {
                 "name": "Queen of Wands",
-                "description": "魅力、情熱、自信",
-                "positive_words": "魅力、情熱、自信、リーダーシップ",
-                "negative_words": "高慢、支配欲、感情のコントロール不足"
+                "description": "魅力的で、リーダーシップがあり意志が強い",
+                "positive_words": "親しみやすい、魅力、親切、自信",
+                "negative_words": "奉仕的、飽き性、目立ちたがり、依存性が強い"
             },
             "king": {
                 "name": "King of Wands",
-                "description": "情熱的なリーダーシップ、創造力、決断力",
-                "positive_words": "情熱的なリーダーシップ、創造力、決断力",
-                "negative_words": "専制、傲慢、短気"
+                "description": "パワフルで行動力があり向上心を忘れずに目標に果敢",
+                "positive_words": "決断力、熱心、心身の強さ",
+                "negative_words": "威張る、衝動的、協調性がない"
             }
         },
         "cup": {
